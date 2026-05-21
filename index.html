@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santrinet - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #667eea;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 20px;
+        }
+        
+        hero {
+            text-align: center;
+            color: white;
+            padding: 4rem 2rem;
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+        
+        .btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .content {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .content h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .content p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav a {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Santrinet</h2>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#tentang">Tentang</a>
+                <a href="#kontak">Kontak</a>
+                <a href="https://github.com/santrinet" target="_blank">GitHub</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <hero id="home">
+                <h1>🚀 Selamat Datang di Santrinet</h1>
+                <p>Platform inovatif untuk mengeksplorasi teknologi dan pengembangan web</p>
+                <a href="https://github.com/santrinet" class="btn">Lihat Repository</a>
+                <a href="#tentang" class="btn">Pelajari Lebih Lanjut</a>
+            </hero>
+            
+            <div class="content" id="tentang">
+                <h2>Tentang Santrinet</h2>
+                <p>
+                    Santrinet adalah platform yang didedikasikan untuk pembelajaran dan pengembangan teknologi. 
+                    Kami percaya pada kekuatan open-source dan kolaborasi untuk menciptakan solusi inovatif.
+                </p>
+                
+                <h3 style="color: #667eea; margin-top: 1.5rem;">Fitur Utama</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h3>💻 Teknologi Modern</h3>
+                        <p>Menggunakan stack teknologi terkini dan best practices dalam development.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🤝 Open Source</h3>
+                        <p>Semua project kami tersedia di GitHub untuk kontribusi komunitas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>📚 Dokumentasi</h3>
+                        <p>Dokumentasi lengkap dan panduan untuk memudahkan implementasi.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content" id="kontak">
+                <h2>Hubungi Kami</h2>
+                <p>Tertarik untuk berkolaborasi atau memiliki pertanyaan?</p>
+                <ul style="list-style-position: inside; color: #555;">
+                    <li>📧 Email: santrinet@example.com</li>
+                    <li>🔗 GitHub: <a href="https://github.com/santrinet" target="_blank" style="color: #667eea;">github.com/santrinet</a></li>
+                    <li>💬 Diskusi: Terbuka untuk semua pertanyaan dan saran</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Santrinet. Semua hak dilindungi.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Built with ❤️ using HTML & CSS</p>
+    </footer>
+</body>
+</html>
